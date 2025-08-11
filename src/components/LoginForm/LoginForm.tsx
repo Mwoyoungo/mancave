@@ -71,7 +71,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
   return (
     <div className="login-form-container">
       <div className="login-form">
-        <div className="mancave-logo">🏠 Mancave Amatyma 🎮</div>
+        <img src="/src/assets/logo1.png" alt="Mancave Amatyma" className="mancave-logo-img" />
         <h2>Welcome to ManCave Chat</h2>
         <p>Enter your details to start chatting</p>
 

@@ -10,6 +10,7 @@ import useSystemColorScheme from './customHooks';
 import { generateExtendedColors } from './utils/utils';
 import { CometChatUIKit } from '@cometchat/chat-uikit-react';
 import { LoginForm } from '../components/LoginForm/LoginForm';
+import { SplashScreen } from '../components/SplashScreen/SplashScreen';
 import '@cometchat/chat-uikit-react/css-variables.css';
 
 interface CometChatAppProps {
@@ -27,6 +28,7 @@ interface CometChatAppProps {
  */
 function CometChatApp({ user, group }: CometChatAppProps) {
   const [loggedInUser, setLoggedInUser] = useState<CometChat.User | null>(null);
+  const [showSplash, setShowSplash] = useState(true);
   const { styleFeatures, setStyleFeatures } = useCometChatContext();
 
   const systemTheme = useSystemColorScheme();
@@ -241,6 +243,14 @@ function CometChatApp({ user, group }: CometChatAppProps) {
       }
     });
   };
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+
+  if (showSplash) {
+    return <SplashScreen onComplete={handleSplashComplete} />;
+  }
 
   return (
     <div className="CometChatApp">
