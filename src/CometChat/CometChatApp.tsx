@@ -171,7 +171,7 @@ function CometChatApp({ user, group }: CometChatAppProps) {
     const handleFontSizeChange = () => {
       const selectedFontSize = fontSizes[styleFeatures.typography.size as keyof typeof fontSizes] || {};
       Object.entries(selectedFontSize)?.forEach(([key, val]) => {
-        document.documentElement.style.setProperty(key, val);
+        document.documentElement.style.setProperty(key, val as string);
       });
     };
 

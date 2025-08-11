@@ -209,9 +209,9 @@ let chatBuilderVersion = "1.0.6";
   try {
     const pkg = await import("../../../package.json");
     chatBuilderName =
-      pkg?.default?.cometChatCustomConfig.name ?? chatBuilderName;
+      (pkg as any)?.default?.cometChatCustomConfig?.name ?? chatBuilderName;
     chatBuilderVersion =
-      pkg?.default?.cometChatCustomConfig.version ?? chatBuilderVersion;
+      (pkg as any)?.default?.cometChatCustomConfig?.version ?? chatBuilderVersion;
   } catch (e) {
     // fallback silently
   }

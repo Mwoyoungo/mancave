@@ -217,7 +217,7 @@ const CometChatSelector = (props: SelectorProps) => {
               onSearchBarClicked={onSearchClicked}
               activeConversation={activeItem as CometChat.Conversation}
               headerView={conversationsHeaderView()}
-              onItemClick={(e) => {
+              onItemClick={(e: any) => {
                 onSelectorItemClicked(e, 'updateSelectedItem');
               }}
               hideUserStatus={chatFeatures && !chatFeatures?.coreMessagingExperience?.userAndFriendsPresence}
