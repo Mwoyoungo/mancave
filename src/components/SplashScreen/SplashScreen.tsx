@@ -21,15 +21,15 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
     <div className={`splash-screen ${!isVisible ? 'fade-out' : ''}`}>
       <div className="splash-content">
         <div className="logo-container">
-          <img src="/src/assets/logo1.png" alt="Mancave Amatyma" className="splash-logo" />
+          <div className="ubuntu-nurses-text-logo">🏥 Ubuntu Nurses 💙</div>
           <div className="loading-dots">
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
-        <h1 className="splash-title">Mancave Amatyma</h1>
-        <p className="splash-subtitle">Welcome to your space</p>
+        <h1 className="splash-title">Ubuntu Nurses</h1>
+        <p className="splash-subtitle">Welcome to your community</p>
       </div>
     </div>
   );

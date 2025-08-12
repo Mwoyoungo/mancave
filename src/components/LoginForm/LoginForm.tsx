@@ -71,9 +71,9 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
   return (
     <div className="login-form-container">
       <div className="login-form">
-        <img src="/src/assets/logo1.png" alt="Mancave Amatyma" className="mancave-logo-img" />
-        <h2>Welcome to ManCave Chat</h2>
-        <p>Enter your details to start chatting</p>
+        <div className="ubuntu-nurses-logo">🏥 Ubuntu Nurses 💙</div>
+        <h2>Welcome to Ubuntu Nurses Chat</h2>
+        <p>Connect with your nursing community</p>
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
